@@ -72,3 +72,8 @@ where $a_{ii}$ are the diagonal elements of $A$ and $a_{ij}$ are the off-diagona
 3. Convergence, repeat the iteration until the changes in $x$ are below a certain tolerance or until a maximum number of iterations is reached.
 
 The method may not converge for all matrices. Choosing a good initial guess can improve convergence. Diagonal dominance of $A$ ensures convergence of the Jacobi method.
+
+## References
+
+- The main site of [deep-ml.com](deep-ml.com)
+- [Math notations for Markdowns and LaTex](https://en.wikibooks.org/wiki/LaTeX/Mathematics)
