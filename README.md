@@ -54,3 +54,21 @@ Where:
 - the off-diagonal elements show the covariance between different features.
 
 The matrix is symmetric as the covariance between $X$ and $Y$ is equal to the covariance between $Y$ and $X$, denoted as $cov(X,Y) = cov(Y,X)$.
+
+## Jacobi Method
+
+The Jacobi method is an iterative algorithm used for solving a system of linear equations $Ax = b$. This method is particularly useful for large systems where direct methods like Gaussian elimination are computationally expensive.
+
+For a system of equations represented by $Ax=b$, where $A$ is a matrix and $x$ and $b$ are vectors, the Jacobi method involves the following steps:
+
+1. Initializations, start with an initial guess of x.
+2. Iteration, for each equation $i$ update $x[i]$ using:
+
+$$
+x[i] = \frac{1}{a_{ii}} (b[i] - \sum_{j \neq i}a_{ij}x[j])
+$$
+
+where $a_{ii}$ are the diagonal elements of $A$ and $a_{ij}$ are the off-diagonal elements.
+3. Convergence, repeat the iteration until the changes in $x$ are below a certain tolerance or until a maximum number of iterations is reached.
+
+The method may not converge for all matrices. Choosing a good initial guess can improve convergence. Diagonal dominance of $A$ ensures convergence of the Jacobi method.
